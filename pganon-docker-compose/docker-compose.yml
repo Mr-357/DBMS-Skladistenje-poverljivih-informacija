@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  db:
+    image: registry.gitlab.com/dalibo/postgresql_anonymizer:stable
+    ports:
+      - "5432:5432"
+    command: postgres 
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_HOST_AUTH_METHOD: md5
